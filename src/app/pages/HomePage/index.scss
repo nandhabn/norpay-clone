@@ -1,0 +1,164 @@
+.app-header {
+  background-color: #0b0819;
+  height: 70px;
+
+  .routes {
+    a {
+      font-size: large;
+      font-weight: 500;
+      padding: 0 8px;
+      text-decoration: none;
+      color: #5A5A5A;
+
+      &.active {
+        color: #627deace;
+      }
+    }
+
+    & .link {
+      &:has(> a.active) {
+        height: 100%;
+        display: flex;
+        align-items: center !important;
+        border-bottom: 2px solid #627deace;
+
+        &:hover {
+          border-bottom: 2px solid #627EEA;
+        }
+      }
+
+      &:hover a {
+        color: #627EEA;
+      }
+
+
+    }
+  }
+
+  .connect {
+
+    button {
+      color: white;
+      border-radius: 50px;
+      background-image: linear-gradient(to right, #416ED3, #6C20CB);
+      border: 0px;
+
+      &:hover {
+        background-image: linear-gradient(to left, #416ED3, #6C20CB);
+      }
+    }
+  }
+}
+
+.ReactModal__Overlay {
+  background-color: #0B0819cc !important;
+}
+
+
+.ReactModal__Content .token-picker {
+  .search {
+    &-container {
+      border-radius: 30px;
+      border: 1px solid rgba(110, 86, 248, 0.25);
+      width: 320px;
+      height: 40px;
+    }
+  }
+
+  .search-container {
+    .token-search.form-control {
+      border: none;
+      background-color: transparent;
+      color: white;
+
+
+      &:-moz-placeholder {
+        color: #D2D2D2;
+        font-family: Nunito;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      &::-webkit-input-placeholder {
+        color: #D2D2D2;
+        font-family: Nunito;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+
+    &:has(:focus) {
+      border: 2px solid rgba(110, 86, 248, 0.25);
+      outline: none;
+    }
+  }
+
+  .token-list {
+    overflow-y: auto;
+    height: 300px;
+
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: #555;
+    }
+
+    .token {
+      width: 318px;
+      min-height: 44px;
+      position: relative;
+      border-radius: 2px;
+
+      color: #FFF;
+      font-family: Poppins;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+
+
+      &:hover {
+        background: #1B192D;
+      }
+
+      &-ico {
+        height: 24px;
+        width: 24px;
+      }
+
+
+      &.selected {
+        background: #1B192D;
+
+        &::after {
+          content: '';
+          position: absolute;
+          right: 16px;
+          transform: translate(0, 30%);
+          background: url('../../assets/images/selected.svg') no-repeat;
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+
+}

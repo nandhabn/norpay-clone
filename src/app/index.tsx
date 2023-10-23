@@ -6,33 +6,26 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import * as React from 'react';
+import { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { GlobalStyle } from 'styles/global-styles';
-
 import { HomePage } from './pages/HomePage/Loadable';
 import { NotFoundPage } from './pages/NotFoundPage/Loadable';
-import { useTranslation } from 'react-i18next';
 
-export function App() {
-  const { i18n } = useTranslation();
+import './assets/styles/index.scss';
+
+export const App = memo(() => {
   return (
     <BrowserRouter>
-      <Helmet
-        titleTemplate="%s - React Boilerplate"
-        defaultTitle="React Boilerplate"
-        htmlAttributes={{ lang: i18n.language }}
-      >
-        <meta name="description" content="A React Boilerplate application" />
+      <Helmet titleTemplate="%s - Norpay" defaultTitle="Norpay">
+        <meta name="description" content="Norpay" />
       </Helmet>
 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <GlobalStyle />
     </BrowserRouter>
   );
-}
+});

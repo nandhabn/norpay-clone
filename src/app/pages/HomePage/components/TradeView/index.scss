@@ -1,0 +1,151 @@
+.view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+
+  .swapper {
+    min-width: 300px;
+    width: 450px;
+    height: 500px;
+    position: relative;
+
+    .content-box {
+      background-clip: border-box;
+      clip-path: path('M234.502 52C256.593 52 274.502 34.0914 274.502 12C274.502 5.95962 278.816 0 284.857 0L452 0C461.941 0 470 8.05888 470 18V549C470 558.941 461.941 567 452 567H18C8.05888 567 0 558.941 0 549V18C0 8.05887 8.05887 0 18 0L184.147 0C190.188 0 194.502 5.95962 194.502 12C194.502 34.0914 212.411 52 234.502 52Z');
+      margin: auto;
+      color: gray;
+      border-radius: 1em;
+      min-width: 300px;
+      width: 450px;
+      height: 500px;
+      background: #0B0819;
+    }
+
+    .floating-icon {
+      img {
+        position: absolute;
+        height: 70px;
+        top: 0;
+        left: 50%;
+        transform: translate(-37%, -35%);
+        border: solid 10px #0b0819;
+        border-radius: 70px;
+      }
+
+    }
+
+    form {
+
+      .form-control {
+        background-color: #1C1731aa;
+        border: none;
+        width: calc(100% - 3rem);
+        height: 60px;
+        padding: 10px;
+
+        &:not([disabled]):hover {
+          background-color: #1C1731;
+        }
+
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      input:-moz-placeholder {
+        color: #57575c !important;
+        font-weight: 600;
+      }
+
+      input::-webkit-input-placeholder {
+        color: #57575c !important;
+        font-weight: 600;
+
+      }
+
+      input:focus:focus-visible {
+        border: 2px solid rgba(110, 86, 248, 0.25);
+        outline: none;
+        // border-color: inherit;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+
+      input {
+        color: white;
+      }
+
+      .invest-input {
+        position: relative;
+
+        &::after {
+          content: "INR";
+          position: absolute;
+          right: 78px;
+          top: 48px;
+        }
+      }
+
+      .token-selector {
+        width: calc(100% - 3rem);
+        color: white;
+        border: none;
+        box-sizing: border-box;
+        align-items: center;
+        margin: 0 !important;
+
+        img {
+          height: 24px;
+          width: 24px;
+          border-radius: 50px;
+          object-fit: contain;
+          padding-right: 0;
+
+          &:last-child {
+            height: 16px;
+            width: 32px;
+          }
+        }
+
+        .tokenName {
+          padding-left: 8px;
+        }
+
+      }
+    }
+
+    .submit-button {
+      border-radius: 30px;
+      border: 1px solid #FFF;
+      background: linear-gradient(94deg, #3387D5 -5.94%, #7A06C9 115.34%);
+      width: 389px;
+      height: 50px;
+      flex-shrink: 0;
+      transition: 2s;
+
+      color: #FFF;
+
+      font-family: Poppins;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      &:hover {
+        background: linear-gradient(94deg, #7A06C9 -5.94%, #3387D5 115.34%, );
+        transition: 2s;
+      }
+    }
+
+
+  }
+}

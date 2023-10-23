@@ -1,25 +1,20 @@
-import * as React from 'react';
+import { memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { NavBar } from 'app/components/NavBar';
-import { Masthead } from './Masthead';
-import { Features } from './Features';
-import { PageWrapper } from 'app/components/PageWrapper';
 
-export function HomePage() {
+import TradeView from './components/TradeView/TradeView';
+import Header from './components/Header/Header';
+
+import './index.scss';
+
+export const HomePage = memo(() => {
   return (
     <>
       <Helmet>
         <title>Home Page</title>
-        <meta
-          name="description"
-          content="A React Boilerplate application homepage"
-        />
+        <meta name="description" content="Norpay" />
       </Helmet>
-      <NavBar />
-      <PageWrapper>
-        <Masthead />
-        <Features />
-      </PageWrapper>
+      <Header />
+      <TradeView />
     </>
   );
-}
+});

@@ -21,7 +21,7 @@ function Header() {
           <img src={norpayLogo} alt="norpay-logo" />
         </Link>
       </div>
-      <div className="routes d-flex align-items-center d-sm-none">
+      <div className="routes align-items-center d-none d-sm-none d-md-flex">
         <HeaderLink to="/" active={true}>
           Trade
         </HeaderLink>
@@ -29,7 +29,7 @@ function Header() {
         <HeaderLink to="/">Support</HeaderLink>
         <HeaderLink to="/">About</HeaderLink>
       </div>
-      <div className="connect d-flex align-items-center">
+      <div className="connect d-flex align-items-center d-none d-sm-none d-md-flex">
         <button className="mb-0 px-4 py-1">Connect Wallet</button>
       </div>
     </div>
